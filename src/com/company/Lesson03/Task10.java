@@ -12,18 +12,26 @@ public class Task10 {
         int n, c = 0;
         System.out.println("Введите число больше 3");
         n = scanner.nextInt();
-        int arr2[] = new int[n];
+        int arr2[] = new int[c];
 
         if (n > 3) {
             int[] arr = new int[n];
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = random.nextInt(n);
                 System.out.print(arr[i] + " ");
+            }
+
+            for (int i = 0; i<arr.length; i++){
+                if (arr[1]%2 ==0){
+                    c++;
+                }
+
+            }
+            for (int i = 0; i< arr2.length; i++)
+                c=0;
                 if (arr[i] % 2 == 0) {
                     arr2[c] = arr[i];
                     c++;
-                }
-            }
             System.out.println(" ");
             for (int i : arr2)
                 if (i>0)
