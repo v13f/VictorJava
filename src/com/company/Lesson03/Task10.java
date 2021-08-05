@@ -27,11 +27,11 @@ public class Task10 {
                 }
 
             }
-            for (int i = 0; i< arr2.length; i++)
-                c=0;
-                if (arr[i] % 2 == 0) {
-                    arr2[c] = arr[i];
-                    c++;
+//            for (int i = 0; i< arr2.length; i++)
+//                c=0;
+//                if (arr[i] % 2 == 0) {
+//                    arr2[c] = arr[i];
+//                    c++;
             System.out.println(" ");
             for (int i : arr2)
                 if (i>0)
