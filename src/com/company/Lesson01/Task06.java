@@ -1,6 +1,6 @@
 package com.company.Lesson01;
 
-public class N6 {
+public class Task06 {
     public static void main(String[] args) {
 
         int a = 132, b = 32;
