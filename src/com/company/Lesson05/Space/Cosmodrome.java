@@ -1,26 +1,12 @@
 package com.company.Lesson05.Space;
 
-public class Cosmodrome implements IStart {
+public class Cosmodrome {
 
-    boolean isTrue;
-    int x = 0;
-
-    void start(int num) {
-        systemCheck();
-    }
-
-    @Override
-    public boolean systemCheck() {
-        return false;
-    }
-
-    @Override
-    public void startingEngines() {
-
-    }
-
-    @Override
-    public void start() {
+    public void go(IStart start) {
+        if (start.systemCheck()){
+            start.startingEngines();
+            start.start();
+        }
 
     }
 }
