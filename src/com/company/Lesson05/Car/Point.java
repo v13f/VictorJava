@@ -3,6 +3,7 @@ package com.company.Lesson05.Car;
 import java.util.Scanner;
 
 public class Point {
+    private double res;
     int x;
     int y;
     int xx, yy;
@@ -13,14 +14,17 @@ public class Point {
         this.y = yy;
     }
 
+    public double getPath() {
+        return res;
+    }
+
     public int startPoint() {
-        double res = Math.sqrt(x * x + y * y);
+        res = Math.sqrt(x * x + y * y);
         return (int) res;
     }
 
     public int addPoint() {
         int xxx, yyy;
-        double res;
         System.out.print("x: ");
         xx = scanner.nextInt();
         System.out.println(" ");
@@ -52,4 +56,6 @@ public class Point {
         } else
             System.out.println("x: " + x + " y: " + y);
     }
+
+
 }
