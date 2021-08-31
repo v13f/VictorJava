@@ -1,4 +1,4 @@
-package com.company.Lesson_6;
+package com.company.Lesson06;
 
 import com.company.Lesson05.Car.Car.Car;
 

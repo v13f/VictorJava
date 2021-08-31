@@ -1,4 +1,4 @@
-package com.company.Lesson_6;
+package com.company.Lesson06;
 
 import java.io.IOException;
 
