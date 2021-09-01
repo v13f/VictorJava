@@ -1,5 +1,6 @@
 package com.company.Lesson06;
 
+import java.io.File;
 import java.io.IOException;
 
 public class Run {
@@ -28,18 +29,18 @@ public class Run {
 //        Lecture lecture = new Lecture();
 //        lecture.fullHeap();
 
-//        String string = "Hello world, my name is Victor";
-//
-//        //Task01
-//        System.out.println(Task01.stringAB(string));
-//
-//        //Task02
-//        System.out.println(Task01.string3and0(string));
-//
-//        //Task03
-//        String separator = File.separator;
-//        String path = separator + "Users" + separator + "user" + separator + "Desktop" + separator + "lesson06.txt";
-//        Task01.task03(path);
+        String string = "Hello world, my name is Victor";
+
+        //Task01
+        System.out.println(Task.stringAB(string));
+
+        //Task02
+        System.out.println(Task.string3and0(string));
+
+        //Task03
+        String separator = File.separator;
+        String path = separator + "Users" + separator + "user" + separator + "Desktop" + separator + "lesson06.txt";
+        Task.task03(path);
 
         //Task04
         String txt = " Lorem Ipsum. is simply is. dummy text of. the printing ana. typesetting industry";
