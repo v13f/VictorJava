@@ -27,7 +27,6 @@ public class Point {
         int xxx, yyy;
         System.out.print("x: ");
         xx = scanner.nextInt();
-        System.out.println(" ");
         System.out.print("Y: ");
         yy = scanner.nextInt();
 

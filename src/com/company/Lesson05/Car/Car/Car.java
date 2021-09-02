@@ -10,7 +10,11 @@ public class Car {
     private int numberOfSeats;
     private int tankCapacity;
     private double fuel100;
+    private float price;
+    private int speed;
     String color;
+
+    public Car() {    }
 
     int x, y;
     Scanner scanner = new Scanner(System.in);
@@ -18,16 +22,42 @@ public class Car {
 
     DecimalFormat df = new DecimalFormat("##.##");
 
-    public Car(double fuel, int numberOfSeats, int tankCapacity, double fuel100, String color) {
+    public Car(double fuel, int numberOfSeats, int tankCapacity, double fuel100, String color, int price, int speed) {
         this.fuel = fuel;
         this.numberOfSeats = numberOfSeats;
         this.tankCapacity = tankCapacity;
         this.fuel100 = fuel100;
         this.color = color;
+        this.price = price;
+        this.speed = speed;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void sound() {
+        System.out.println("Пр-пр-пр-пр-пр-пр");
     }
 
     public void addPoint() {
         point.addPoint();
+    }
+
+    public void addFuel(){
+        fuel = tankCapacity;
+    }
+
+    public double getFuel100() {
+        return fuel100;
+    }
+
+    public void setFuel100(double fuel100) {
+        this.fuel100 = fuel100;
+    }
+
+    public void showPoint(){
+        point.showPoint();
     }
 
     public void start() {
@@ -50,5 +80,25 @@ public class Car {
     public double getFuel() {
         System.out.println("В баке " + df.format(fuel) + " л. топлева");
         return fuel;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public float getPrice() {
+        System.out.println("Цена авто: "+ df.format(price) + " $");
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Car " +
+                "fuel: " + fuel +
+                ", numberOfSeats = " + numberOfSeats +
+                ", tankCapacity = " + tankCapacity +
+                ", fuel100 = " + fuel100 +
+                ", price = " + price +
+                ", color = " + color;
     }
 }
