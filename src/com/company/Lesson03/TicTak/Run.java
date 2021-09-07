@@ -4,8 +4,8 @@ public class Run {
     public static void main(String[] args) {
 
 
-        Person xxx = new Person("x");
-        Person ooo = new Person("o");
+        Person xxx = new Person("X");
+        Person ooo = new Person("O");
 
         XO xo = new XO ();
         xo.newGame();

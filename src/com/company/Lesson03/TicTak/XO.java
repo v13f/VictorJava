@@ -12,6 +12,10 @@ public class XO {
         for (int i = 0; i < field.length; i++) {
             for (int z = 0; z < field.length; z++) {
                 field[i][z] = "[ ]";
+
+//                field[1][1] = "[O]";
+//                field[2][2] = "[O]";
+//                field[0][0] = "[O]";
             }
         }
     }
@@ -37,16 +41,34 @@ public class XO {
         }
     }
 
-    public void check(Person person) {
+    public boolean check(Person person) {
+        if (checkMainDiagonal(person)) {
+            return true;
+        }
+        return false;
+    }
+
+    int res;
+
+    public boolean checkMainDiagonal(Person person) {
+        int z = 1;
         for (int i = 0; i < field.length; i++) {
-            for (int z = 0; z< field.length; z++)
-            if (field[i][z] == field[1][1]&& field[1][1] == field[2][2] && field[0][0] != "[ ]") {
-                System.out.println("Победа " + person.answer);
+            if (field[i][i] == field[z][z] && field[i][i] != "[ ]") {
+                z++;
+                res++;
             }
+            break;
         }
+        if (res == field.length - 1) {
+            System.out.println("Игрок: " + person.answer + " - победил");
+            return true;
         }
+        res = 0;
+        return false;
+    }
 
     public void enterAnswer(Person person) {
+        System.out.println("Ход: " + person.answer);
         System.out.print("x: ");
         x = scanner.nextInt() - 1;
         System.out.print("y: ");
@@ -54,13 +76,11 @@ public class XO {
     }
 
     public void gameTicTak(Person person) {
-        enterAnswer(person);
-        put(person);
-        showField();
-       check(person);
-
-
-
+        do {
+            enterAnswer(person);
+            put(person);
+            showField();
+        } while (check(person));
     }
 
 
