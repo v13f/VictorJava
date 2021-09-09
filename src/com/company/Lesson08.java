@@ -1,4 +1,4 @@
 package com.company;
 
-public class Lesson08 {
+public class Lesson08   {
 }
