@@ -68,6 +68,36 @@ public class MyLinkedList {
         return false;
     }
 
+    public boolean contains(Integer num) {
+        Element el = head;
+        if (head == null) {
+            return false;
+        }
+        while (el != null) {
+            if (el.value == num) {
+                return true;
+            }
+            el = el.next;
+        }
+        return false;
+    }
+
+    public Integer containsIndex(Integer num) {
+        Element el = head;
+        if (head == null) {
+            return null;
+        }
+        int index = 0;
+        while (el != null) {
+            if (el.value == num) {
+                return index;
+            }
+            index++;
+            el = el.next;
+        }
+        return null;
+    }
+
 
     public Integer get(int index) {
         Element el = head;
@@ -118,8 +148,20 @@ public class MyLinkedList {
         return null;
     }
 
-    public boolean isEmpty (){
-        if (head == null){
+    public void viewList() {
+        Element el = head;
+        int i = 0;
+        do {
+            System.out.print(i +" элелемент = "+ el.value + " ");
+            el = el.next;
+            i++;
+            }while (el != null);
+        System.out.println(" ");
+        }
+
+
+    public boolean isEmpty() {
+        if (head == null) {
             return true;
         }
         return false;

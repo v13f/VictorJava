@@ -61,9 +61,9 @@ public class Shop {
         listProducts.add(p);
     }
 
-    public boolean delete(int index) {
-        if (index < listProducts.size()) {
-            listProducts.remove(index);
+    public boolean delete(int id) {
+        if (id < listProducts.size()) {
+            listProducts.remove(id);
             return true;
         } else {
             System.out.println("Такого продукта не существует");

@@ -4,4 +4,5 @@ public class Element {
     int value;
     Element prev;
     Element next;
+
 }

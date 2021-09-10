@@ -15,6 +15,7 @@ public class Run {
         myLinkedList.add(27);
 
 
+
         myLinkedList.size();
 //удаление элемента
         myLinkedList.remove(4);
