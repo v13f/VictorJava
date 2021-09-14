@@ -1,11 +1,11 @@
 package com.company.Lesson09.MyLinkedList;
 
-public class MyLinkedList {
-    Element head;
-    Element tail;
+public class MyLinkedList<T> {
+    Element<T> head;
+    Element<T> tail;
 
-    public void add(Integer i) {
-        Element element = new Element();
+    public void add(T i) {
+        Element<T> element = new Element<T>();
         element.value = i;
         if (head == null) {
             head = element;
@@ -17,8 +17,8 @@ public class MyLinkedList {
         }
     }
 
-    public void addFirst(Integer i) {
-        Element element = new Element();
+    public void addFirst(T i) {
+        Element<T> element = new <T>Element();
         element.value = i;
         if (head == null) {
             head = element;
@@ -37,7 +37,7 @@ public class MyLinkedList {
             return 0;
         }
         int i = 1;
-        Element el = head;
+        Element<T> el = head;
         while (el.next != null) {
             el = el.next;
 //            System.out.println(el.value);
@@ -49,7 +49,7 @@ public class MyLinkedList {
     }
 
     public boolean remove(int index) {
-        Element el = head;
+        Element<T> el = head;
         if (head == null) {
             return false;
         }
@@ -68,8 +68,8 @@ public class MyLinkedList {
         return false;
     }
 
-    public boolean contains(Integer num) {
-        Element el = head;
+    public boolean contains(T num) {
+        Element<T> el = head;
         if (head == null) {
             return false;
         }
@@ -82,25 +82,9 @@ public class MyLinkedList {
         return false;
     }
 
-    public Integer containsIndex(Integer num) {
-        Element el = head;
-        if (head == null) {
-            return null;
-        }
-        int index = 0;
-        while (el != null) {
-            if (el.value == num) {
-                return index;
-            }
-            index++;
-            el = el.next;
-        }
-        return null;
-    }
 
-
-    public Integer get(int index) {
-        Element el = head;
+    public T get(int index) {
+        Element<T> el = head;
         if (head == null) {
             return null;
         }
@@ -116,13 +100,13 @@ public class MyLinkedList {
 
     }
 
-    public Integer indexOf(int num) {
+    public Integer indexOf(T num) {
         int index = 0;
-        Element el = head;
+        Element<T> el = head;
         if (head == null) {
             return null;
         }
-        while (el.next != null) {
+        while (el != null) {
             if (num == el.value) {
                 return index;
             }
@@ -132,8 +116,8 @@ public class MyLinkedList {
         return null;
     }
 
-    public Integer lastIndexOf(int number) {
-        Element el = tail;
+    public Integer lastIndexOf(T number) {
+        Element<T> el = tail;
         if (head == null) {
             return null;
         }
@@ -149,16 +133,15 @@ public class MyLinkedList {
     }
 
     public void viewList() {
-        Element el = head;
+        Element<T> el = head;
         int i = 0;
-        do {
-            System.out.print(i +" элелемент = "+ el.value + " ");
+        while (el != null) {
+            System.out.print(i + " элелемент = " + el.value + " ");
             el = el.next;
             i++;
-            }while (el != null);
-        System.out.println(" ");
         }
-
+            System.out.println(" ");
+        }
 
     public boolean isEmpty() {
         if (head == null) {

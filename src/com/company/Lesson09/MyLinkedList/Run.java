@@ -3,7 +3,7 @@ package com.company.Lesson09.MyLinkedList;
 public class Run {
     public static void main(String[] args) {
 
-        MyLinkedList myLinkedList = new MyLinkedList();
+        MyLinkedList <Integer> myLinkedList = new MyLinkedList<Integer>();
 
         myLinkedList.add(20);
         myLinkedList.add(21);
